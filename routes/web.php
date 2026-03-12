@@ -9,6 +9,7 @@ use App\Http\Controllers\PopupController;
 use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\WidgetController;
 use App\Http\Controllers\ImportController;
+use App\Http\Middleware\AuthShop;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 // ============================================
 
 // Middleware 'auth.shop' check karega ke user login hai ya nahi
-Route::middleware(['auth.shop'])->group(function () {
+Route::middleware([AuthShop::class])->group(function () {
 
     // Dashboard - Main page
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
