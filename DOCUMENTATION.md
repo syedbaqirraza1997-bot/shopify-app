@@ -187,7 +187,7 @@ SHOPIFY_APP_URL=http://127.0.0.1:8000
 1. **Browser mein jayein:**
 
     ```
-    https://example-app.test/auth?shop=smart-conversion-test.myshopify.com
+    https://shopify-app-main-ne7pu1.free.laravel.cloud/auth?shop=smart-conversion-test.myshopify.com
     ```
 
     - `apna-dev-store` ki jagah apna store name daalein
