@@ -107,8 +107,13 @@
                         <div class="mb-3">
                             <label class="form-label">Message Template</label>
 
+                            @php
+                                $defaultTemplate =
+                                    '{{ name }} from {{ location }} purchased {{ product }}';
+                            @endphp
+
                             <input type="text" name="sales_popup_template" class="form-control"
-                                value="{{ $settings->sales_popup_template ?? '@{{ name }} from @{{ location }} purchased @{{ product }}' }}">
+                                value="{{ $settings->sales_popup_template ?? $defaultTemplate }}">
                             <small class="text-muted">Variables: {{ '{name}' }}, {{ '{location}' }},
                                 {{ '{product}' }}, {{ '{time}' }}</small>
                         </div>
