@@ -106,8 +106,9 @@
 
                         <div class="mb-3">
                             <label class="form-label">Message Template</label>
+
                             <input type="text" name="sales_popup_template" class="form-control"
-                                value="{{ old('sales_popup_template', $settings->sales_popup_template ?? '@{{ name }} from @{{ location }} purchased @{{ product }}') }}">
+                                value="{{ $settings->sales_popup_template ?? '@{{ name }} from @{{ location }} purchased @{{ product }}' }}">
                             <small class="text-muted">Variables: {{ '{name}' }}, {{ '{location}' }},
                                 {{ '{product}' }}, {{ '{time}' }}</small>
                         </div>
